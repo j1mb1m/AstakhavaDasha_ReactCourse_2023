@@ -1,49 +1,16 @@
-.ProductList {
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.ProductList
+{
     font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
     font-size: 14px;
     background: white;
-    border-collapse: collapse;
     text-align: left;
     margin: 0 auto;
     width: 100%;
     max-width: 1000px;
-}
-
-.ProductList thead td {
-    background: #6678b1;
-    color: black;
-    position: sticky;
-    top: -1px;
-}
-
-.ProductList td {
-    color: #669;
-    padding: 9px;
-    border: 1px solid grey;
-}
-
-.ProductList tr {
-    border: 1px solid grey;
-}
-
-.ProductList tr:hover td {
-    color: rgb(58, 58, 212);
-}
-
-.ProductList .availableQuantity,
-.ProductList .price {
-    text-align: center;
-    width: 30px;
-}
-
-.ProductList .title {
-    max-width: 300px;
-}
-
-.ProductList .url {
-    max-width: 40px;
-}
-
-.ProductList img {
-    width: 100%;
+    box-sizing: border-box;
 }
