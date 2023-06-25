@@ -1,0 +1,10 @@
+
+.FilterBlock ul {
+    list-style-type: none;
+    overflow-y: scroll;
+    height: 100px;
+    /* margin: 0; */
+    padding: 0 0 0 5px;
+    border: 1px solid black;
+    max-width: 250px;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ishop</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/react@15/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+
+    <script src="stringArray.js"></script>
+    <script src="FilterBlock.js"></script>
+    <link rel="stylesheet" type="text/css" href="FilterBlock.css" />
+    <script src="FilterList.js"></script>
+    <link rel="stylesheet" type="text/css" href="FilterList.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="ProductItem.css" /> -->
+
+    <script>
+        ReactDOM.render(
+            React.createElement(FilterBlock, { stringArr: stringArray }),
+            document.getElementById('root')
+        );
+    </script>
+</body>
+
+</html>
