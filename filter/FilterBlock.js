@@ -39,13 +39,16 @@ var FilterBlock = React.createClass({
 
     // service procedures 
 
-    updateForm: function() {
+    updateForm: function () {
         var arr = this.props.stringArr;
-        if (this.state.searchedText){
+        if (this.state.searchedText) {
             arr = arr.filter(name => name.includes(this.state.searchedText));
         }
         if (this.state.isSorted) {
-            arr = [].slice.call(arr).sort();
+            if (this.state.searchedText)
+                arr.sort(); //sorting a copy of the array because 'filter' returns a new array
+            else
+                arr = [].slice.call(arr).sort(); //creating a new array so that the original array doesn't change
         }
         this.setState({ data: arr });
     },
