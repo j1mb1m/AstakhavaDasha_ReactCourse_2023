@@ -19,8 +19,9 @@ var ProductItem = React.createClass({
     },
 
     productItemOnClick: function (event) {
-        if (event.target.type == 'submit') return;
+        event.stopPropagation();
         this.props.cbSelected(this.props.item.id);
+
     },
 
     deleteOnClick: function () {

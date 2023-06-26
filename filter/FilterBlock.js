@@ -12,22 +12,44 @@ var FilterBlock = React.createClass({
     getInitialState: function () {
         return {
             searchedText: '',
-            sort: false
+            isSorted: false,
+            data: this.props.stringArr,
         };
     },
 
+    // handlers
 
     filterTextChanged: function (EO) {
-        this.setState({ searchedText: EO.target.value });
+        var text = EO.target.value;
+        this.setState({ searchedText: text }, () => { this.search() });
+    },
+
+
+    sortOnClick: function () {
+        this.setState({ isSorted: !this.state.isSorted }, () => { this.state.isSorted ? this.sort() : this.search() });
     },
 
     resetOnClick: function () {
-        this.setState({ searchedText: '', sort: false });
+        this.setState({
+            searchedText: '',
+            isSorted: false,
+            data: this.props.stringArr
+        });
+    },
+
+    // service procedures 
+
+    search: function () {
+        var arr = this.props.stringArr.filter(name => name.includes(this.state.searchedText));
+        this.setState({ data: arr }, () => {
+            if (this.state.isSorted) this.sort();
+        });
 
     },
 
-    sortOnClick: function () {
-        this.setState({ sort: !this.state.sort });
+    sort: function () {
+        var arr = [].slice.call(this.state.data).sort();
+        this.setState({ data: arr });
     },
 
     render: function () {
@@ -36,7 +58,7 @@ var FilterBlock = React.createClass({
                 type: 'checkbox',
                 name: 'sort',
                 onClick: this.sortOnClick,
-                checked: this.state.sort
+                checked: this.state.isSorted
             }),
             React.DOM.input({
                 type: 'text',
@@ -51,9 +73,7 @@ var FilterBlock = React.createClass({
                 onClick: this.resetOnClick
             }, 'reset'),
             React.createElement(FilterList, {
-                stringArr: this.props.stringArr,
-                searchLetters: this.state.searchedText,
-                sort: this.state.sort,
+                stringArr: this.state.data,
             })
         )
     },

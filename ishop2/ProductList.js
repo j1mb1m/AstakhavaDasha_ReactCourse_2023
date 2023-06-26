@@ -33,7 +33,7 @@ var ProductList = React.createClass({
         var arr = this.state.productArray.filter((item) => item.id !== id);
         this.setState({ productArray: arr });
     },
-
+    
     render: function () {
         return React.DOM.table({ className: 'ProductList' },
             React.DOM.thead(null,
