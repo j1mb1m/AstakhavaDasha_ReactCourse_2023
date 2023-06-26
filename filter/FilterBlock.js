@@ -21,12 +21,12 @@ var FilterBlock = React.createClass({
 
     filterTextChanged: function (EO) {
         var text = EO.target.value;
-        this.setState({ searchedText: text }, () => { this.search() });
+        this.setState({ searchedText: text }, this.updateForm);
     },
 
 
     sortOnClick: function () {
-        this.setState({ isSorted: !this.state.isSorted }, () => { this.state.isSorted ? this.sort() : this.search() });
+        this.setState({ isSorted: !this.state.isSorted }, this.updateForm);
     },
 
     resetOnClick: function () {
@@ -39,16 +39,14 @@ var FilterBlock = React.createClass({
 
     // service procedures 
 
-    search: function () {
-        var arr = this.props.stringArr.filter(name => name.includes(this.state.searchedText));
-        this.setState({ data: arr }, () => {
-            if (this.state.isSorted) this.sort();
-        });
-
-    },
-
-    sort: function () {
-        var arr = [].slice.call(this.state.data).sort();
+    updateForm: function() {
+        var arr = this.props.stringArr;
+        if (this.state.searchedText){
+            arr = arr.filter(name => name.includes(this.state.searchedText));
+        }
+        if (this.state.isSorted) {
+            arr = [].slice.call(arr).sort();
+        }
         this.setState({ data: arr });
     },
 
