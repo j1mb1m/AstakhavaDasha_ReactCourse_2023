@@ -48,7 +48,7 @@ var FilterBlock = React.createClass({
             if (this.state.searchedText)
                 arr.sort(); //sorting a copy of the array because 'filter' returns a new array
             else
-                arr = [].slice.call(arr).sort(); //creating a new array so that the original array doesn't change
+                arr = arr.slice().sort(); //creating a new array so that the original array doesn't change
         }
         this.setState({ data: arr });
     },
