@@ -45,10 +45,10 @@ var FilterBlock = React.createClass({
             arr = arr.filter(name => name.includes(this.state.searchedText));
         }
         if (this.state.isSorted) {
-            if (this.state.searchedText)
-                arr.sort(); //sorting a copy of the array because 'filter' returns a new array
-            else
-                arr = arr.slice().sort(); //creating a new array so that the original array doesn't change
+            if (arr === this.props.stringArr)
+                arr = arr.slice();//creating a new array so that the original array doesn't change
+            
+            arr.sort(); //sorting a copy of the array
         }
         this.setState({ data: arr });
     },
