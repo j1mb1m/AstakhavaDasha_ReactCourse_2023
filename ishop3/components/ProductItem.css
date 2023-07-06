@@ -1,0 +1,61 @@
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .ProductList {
+        font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+        font-size: 12px;
+        background: white;
+        border-collapse: collapse;
+        text-align: left;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1000px;
+        box-sizing: border-box;
+    }
+
+    .ProductList thead td {
+        background: #6678b1;
+        color: black;
+        position: sticky;
+        top: 0px;
+        text-align: center;
+    }
+
+    .ProductList td {
+        color: #669;
+        padding: 9px;
+        border: 1px solid grey;
+    }
+
+    .ProductList tr {
+        border: 1px solid grey;
+    }
+
+    .ProductList tbody tr:hover td {
+        color: rgb(58, 58, 212);
+    }
+
+    .ProductList .ProductItem_availableQuantity,
+    .ProductList .ProductItem_price {
+        text-align: center;
+        width: 100px;
+    }
+
+    .ProductList .ProductItem_control button {
+        width: 60px;
+    }
+
+    .ProductList .ProductItem_title {
+        max-width: 300px;
+    }
+
+    .ProductList .SelectedRow {
+        background-color: rgb(234, 234, 236);
+    }
+
+    .ProductList img {
+        width: 100%;
+    }

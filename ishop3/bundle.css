@@ -1,0 +1,133 @@
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .ProductList {
+        font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+        font-size: 12px;
+        background: white;
+        border-collapse: collapse;
+        text-align: left;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1000px;
+        box-sizing: border-box;
+    }
+
+    .ProductList thead td {
+        background: #6678b1;
+        color: black;
+        position: sticky;
+        top: 0px;
+        text-align: center;
+    }
+
+    .ProductList td {
+        color: #669;
+        padding: 9px;
+        border: 1px solid grey;
+    }
+
+    .ProductList tr {
+        border: 1px solid grey;
+    }
+
+    .ProductList tbody tr:hover td {
+        color: rgb(58, 58, 212);
+    }
+
+    .ProductList .ProductItem_availableQuantity,
+    .ProductList .ProductItem_price {
+        text-align: center;
+        width: 100px;
+    }
+
+    .ProductList .ProductItem_control button {
+        width: 60px;
+    }
+
+    .ProductList .ProductItem_title {
+        max-width: 300px;
+    }
+
+    .ProductList .SelectedRow {
+        background-color: rgb(234, 234, 236);
+    }
+
+    .ProductList img {
+        width: 100%;
+    }* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ProductContainer {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.ProductList {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    background: white;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.ProductContainer button{
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}.ProductCard {
+    width: 100%;
+    border: 1px solid black;
+    padding: 20px;
+/*     display: flex;
+    flex-direction: column; */
+}
+
+.ProductCard .ProductCard_title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.ProductCard .ProductCard_description {
+    font-weight: 800;
+    font-style: italic;
+    color: rgb(39, 27, 86);
+    margin-bottom: 30px;
+}
+
+.ProductCard label {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.ProductCard input,
+textarea {
+    position: absolute;
+    left: 120px;
+    right: 0;
+}
+
+.ProductCard .ProductCardEdit_description {
+    height: 76px;
+}
+.ProductCard .ProductCard_buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.ProductCard .ProductCard_buttons button {
+    margin-top: 10px;
+    min-width: 80px;
+}
+/*# sourceMappingURL=bundle.css.map*/
