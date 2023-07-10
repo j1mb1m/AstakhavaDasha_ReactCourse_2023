@@ -14,6 +14,7 @@ class ProductItem extends React.Component {
             availableQuantity: PropTypes.number.isRequired,
 
         }),
+        onlyView: PropTypes.bool,
         selectedProductID: PropTypes.number,
         cbSelect: PropTypes.func.isRequired,
         cbRemove: PropTypes.func.isRequired,
@@ -38,7 +39,6 @@ class ProductItem extends React.Component {
         event.preventDefault();
         event.stopPropagation();
 
-        /*         this.props.cbSelect(this.props.item.id); */
         this.props.cbEdit(this.props.item.id);
     };
 
@@ -54,8 +54,8 @@ class ProductItem extends React.Component {
             <td className='ProductItem_price'>{`${this.props.item.price} руб.`}</td>
             <td className='ProductItem_availableQuantity'>{this.props.item.availableQuantity} шт.</td>
             <td className='ProductItem_control'>
-                <button onClick={this.editOnClick}>Edit</button>
-                <button onClick={this.deleteOnClick}>Delete</button>
+                <button onClick={this.editOnClick} disabled={this.props.onlyView}>Edit</button>
+                <button onClick={this.deleteOnClick} disabled={this.props.onlyView}>Delete</button>
             </td>
         </tr>
     };

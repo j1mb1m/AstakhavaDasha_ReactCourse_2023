@@ -1,0 +1,19 @@
+.ProductViewingForm {
+    width: 100%;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.ProductViewingForm .ProductViewingForm_title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.ProductViewingForm .ProductViewingForm_description {
+    font-weight: 800;
+    font-style: italic;
+    color: rgb(39, 27, 86);
+    margin-bottom: 30px;
+}
+
