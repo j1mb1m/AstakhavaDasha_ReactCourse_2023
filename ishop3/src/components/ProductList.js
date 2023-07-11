@@ -73,7 +73,9 @@ class ProductList extends React.Component {
         this.setState({ selectedProductID: null, isModifySelectedProduct: false, formStatus: FormStatus.VIEW, productArray: arr });
     }
 
-    newProductOnClick = () => {
+    newProductOnClick = (event) => {
+        event.stopPropagation();
+        
         this.setState({ selectedProductID: null, isModifySelectedProduct: true, formStatus: FormStatus.NEW });
     }
 

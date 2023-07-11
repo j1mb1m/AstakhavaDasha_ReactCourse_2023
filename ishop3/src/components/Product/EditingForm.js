@@ -53,6 +53,8 @@ class EditingForm extends React.Component {
     };
 
     handleUserInput = (e) => {
+        e.stopPropagation();
+        
         let {name, value} = e.target;
    
         const errors = this.state.errors;
