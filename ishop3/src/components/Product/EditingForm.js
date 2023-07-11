@@ -53,9 +53,8 @@ class EditingForm extends React.Component {
     };
 
     handleUserInput = (e) => {
-        const name = e.target.name;
-        let value = e.target.value;
-
+        let {name, value} = e.target;
+   
         const errors = this.state.errors;
         const fields = this.state.fields;
 
