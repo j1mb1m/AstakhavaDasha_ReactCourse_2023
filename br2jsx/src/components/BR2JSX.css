@@ -1,0 +1,12 @@
+.BR2JSX {
+    background-color: rgb(41, 84, 83);
+    color: white;
+    text-align: center;
+    width: fit-content;
+
+    padding: 30px;
+    margin: 10px;
+
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22px;
+}
