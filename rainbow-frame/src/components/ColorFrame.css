@@ -1,0 +1,14 @@
+.ColorFrame {
+    margin: 7px;
+    max-width: 530px;
+    border: solid 8px black;
+
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22px;
+    
+    text-align: center;
+
+    box-sizing: border-box;
+    line-height: 70px;
+}
