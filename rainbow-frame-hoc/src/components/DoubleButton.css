@@ -1,0 +1,11 @@
+.DoubleButton{
+    padding: 7px;
+
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+
+}
+
+.DoubleButton span{
+    padding: 7px;
+}

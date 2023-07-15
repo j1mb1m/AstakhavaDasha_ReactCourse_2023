@@ -1,0 +1,5 @@
+.WithRainbowFrame{
+    border: double 4px gray;
+    width: fit-content;
+    margin: 5px;
+}
