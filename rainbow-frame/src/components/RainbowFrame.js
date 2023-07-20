@@ -11,7 +11,7 @@ function generateFrame(colors, content) {
 }
 
 export const RainbowFrame = props => {
-    return generateFrame([...props.colors], props.children);
+    return generateFrame(props.colors, props.children);
 };
 
 RainbowFrame.propTypes = {
