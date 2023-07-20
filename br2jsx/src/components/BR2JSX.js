@@ -10,7 +10,7 @@ function BR2JSX(props) {
         const array = [];
         originArray.forEach(function (str, index) {
             if (!!index)
-                array.push(<br key = {index}/>);
+                array.push(<br key={index} />);
             array.push(str);
         })
         return array;
