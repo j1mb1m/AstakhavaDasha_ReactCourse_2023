@@ -149,7 +149,7 @@ class ProductList extends React.Component {
                     </tr>
                 </thead>
                 <tbody className='ProductList' >
-                    {this.state.productArray.map(e =>
+                    {this.state.productArray && this.state.productArray.map(e =>
                         <ProductItem
                             key={e.id}
                             item={e}
