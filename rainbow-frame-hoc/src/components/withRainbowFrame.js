@@ -1,5 +1,5 @@
 import React from 'react';
-import ColorFrame from './ColorFrame';
+
 
 import './WithRainbowFrame.css';
 
@@ -11,17 +11,13 @@ function withRainbowFrame(colors) {
 
             return <div className='WithRainbowFrame'>{generateFrame([...colors])}</div>;
 
-            function generateFrame(temp_colors) {
-                const color = temp_colors.pop();
+            function generateFrame(colors) {
 
-                if (!temp_colors.length)
-                    return <ColorFrame color={color}>
-                        <Comp {...props}></Comp>
-                    </ColorFrame>
+                let result = colors.reduce((prev, curr) => {
+                    return <div className='RainbowFrame' style={{ borderColor: `${curr}` }} children={prev}></div>
+                }, <Comp {...props}></Comp>);
 
-                return <ColorFrame color={color}>
-                    {generateFrame(temp_colors)}
-                </ColorFrame>
+                return result;
             }
         }
 

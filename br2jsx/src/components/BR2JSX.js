@@ -3,22 +3,13 @@ import './BR2JSX.css';
 
 function BR2JSX(props) {
 
-    function normalize(text) {
-        const reg = /<(\s)*br(\s)*(\/)*>/g;
-        text = text.replace(reg, '<br/>');
-        return text;
-    }
-
-    let text = props.text;
-
-    const sentences = normalize(text).split('<br/>');
+    const text = props.text;
+    const sentences = text.split(/<br>|<br\s*\/>/i);
 
     return (
         <div className='BR2JSX'>
-            {sentences.map((str, index) => {
-                return <span key={index}>{str} <br /></span>
-            })}
-        </div>
+            {sentences.reduce((prev, curr, index) => { return <>{prev}{!!index && <br />} {curr}</> }, '')}
+        </div >
     );
 
 }

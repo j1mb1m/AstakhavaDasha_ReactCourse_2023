@@ -3,3 +3,12 @@
     width: fit-content;
     margin: 5px;
 }
+
+.WithRainbowFrame .RainbowFrame {
+    margin: 7px;
+    width: fit-content;
+    border: solid 8px black;
+
+    box-sizing: border-box;
+
+}

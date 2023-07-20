@@ -1,21 +1,17 @@
 import PropTypes from 'prop-types';
-import ColorFrame from './ColorFrame';
+import './RainbowFrame.css';
 
 function generateFrame(colors, content) {
-    const color = colors.pop();
-    if (colors.length > 0)
-        return <ColorFrame color={color}>
-            {generateFrame(colors, content)}
-        </ColorFrame>;
-    else
-        return <ColorFrame color={color}>
-            {content}
-        </ColorFrame>;;
+
+    let result = colors.reduce((prev, curr) => {
+        return <div className='RainbowFrame' style={{ borderColor: `${curr}` }} children={prev}></div>
+    }, content);
+
+    return result;
 }
 
 export const RainbowFrame = props => {
-    const colors = [...props.colors];
-    return generateFrame(colors, props.children);
+    return generateFrame([...props.colors], props.children);
 };
 
 RainbowFrame.propTypes = {
