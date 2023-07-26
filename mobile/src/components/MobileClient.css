@@ -1,0 +1,7 @@
+.MobileClient .MobileClientStatus {
+    background-color: red;
+}
+
+.MobileClient .active {
+    background-color: green;
+}

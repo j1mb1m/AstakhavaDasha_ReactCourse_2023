@@ -1,0 +1,29 @@
+.MobileClientEditForm {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 20px;
+
+    width: fit-content;
+}
+
+.MobileClientEditForm label {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.MobileClientEditForm label input {
+    width: 300px;
+}
+
+.MobileClientEditForm  div {
+    width: 100%;
+}
+
+.MobileClientEditForm .MobileClientEditForm_buttons{
+    margin: 15px auto 0;
+    display: flex;  
+    justify-content: flex-end;
+}
