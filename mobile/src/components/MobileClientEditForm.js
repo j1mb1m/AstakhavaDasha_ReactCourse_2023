@@ -39,6 +39,8 @@ class MobileClientEditForm extends React.PureComponent {
     };
 
     render() {
+        console.log(`render MobileClientEditForm ${this.props.item.id}`);
+
         return <form className='MobileClientEditForm' >
             <label>Фамилия:
                 <input type='text' name='surname' ref={this.surnameRef} defaultValue={this.props.item.surname} />
