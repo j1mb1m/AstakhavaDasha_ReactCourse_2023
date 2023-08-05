@@ -64,8 +64,7 @@ class MobileCompany extends React.PureComponent {
 
         if (this.state.formStatus === formStatus.NEW) {
             let max_id = clients.reduce((p, v) => p.id > v.id ? p.id : v.id);
-            data.id = ++max_id;
-            clients.push(data);
+            clients.push({...data, id: ++max_id});
         }
         else if (this.state.formStatus === formStatus.EDIT) {
             clients = clients.map(element => {
